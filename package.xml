@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+    <name>Kerss_Tweets</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Allows you to display your recent tweets on any page of your website. </summary>
+    <description>Latest Twitter Feeds extension will show your latest twitter feeds in your website with regular updates from your twitter account with the latest Twitter Auth Token Standard. &#xD;
+&#xD;
+Features:&#xD;
+- Light and Dark theme&#xD;
+- Show the Twitter Intents (Reply, Retweet and Like)&#xD;
+- Manage number of Tweets&#xD;
+- Show Follow twitter button&#xD;
+- Display in any CMS pages using widget&#xD;
+- Manually implement code in template, xml layout &amp; cms pages</description>
+    <notes>First Release</notes>
+    <authors><author><name>Kalpesh Sakhareliya</name><user>kersstech</user><email>kersstech@gmail.com</email></author></authors>
+    <date>2016-10-15</date>
+    <time>07:46:36</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Kerss_Tweets.xml" hash="d138ac4f2ab4b2e0e5e344805382f05a"/></dir></target><target name="magecommunity"><dir name="Kerss"><dir name="Tweets"><dir name="Block"><file name="Managejquery.php" hash="9c142b680a92e7adb9509a68b77a1d06"/><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Colorpicker.php" hash="f4a7ec0e4e6bc5e99dbe783cc9436e5a"/></dir></dir><file name="Implementcode.php" hash="deee2cbcb2b094ffc649f17367fd8c87"/></dir></dir><file name="Tweets.php" hash="413ae17f930ea56815e204cb4cd162e7"/></dir><dir name="Helper"><file name="Data.php" hash="cfeb9de89b7afddb66f7c7b3b0893bd6"/></dir><dir name="Model"><dir name="System"><dir name="Config"><dir name="Backend"><dir name="Design"><dir name="Color"><file name="Validatetransparent.php" hash="b9fa0d615461f35f68261918a71c8309"/></dir></dir></dir><dir name="Source"><file name="Numbers.php" hash="1c3c8f40ac1e53a718066fbcf136a4f0"/><file name="Theme.php" hash="bc23ef696311f122a7d7be9886f667a4"/></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="4f5bca8e2af7f599416a75b854894f95"/><file name="config.xml" hash="7ea64b814f1146060dd8a0cbfcdf502d"/><file name="system.xml" hash="18f1f4c65fc46b6222b1044651bb95a7"/><file name="widget.xml" hash="57a1154a2c3018ad3034a2892d7a49bd"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="tweets.xml" hash="b199590d3f4fd2d8ffb69e96ccbe7f8f"/></dir><dir name="template"><dir name="kerss"><dir name="tweets"><file name="tweets.phtml" hash="aef1aa503901d3b43a14a92ed47ab353"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="twitter"><file name="font-awesome.min.css" hash="10e05214ee400993708cb154814020b4"/><dir name="fonts"><file name="FontAwesome.otf" hash="87d8ca3ddc57e7d2da6226e480f90457"/><file name="fontawesome-webfont.eot" hash="32400f4e08932a94d8bfd2422702c446"/><file name="fontawesome-webfont.svg" hash="f775f9cca88e21d45bebe185b27c0e5b"/><file name="fontawesome-webfont.ttf" hash="a3de2170e4e9df77161ea5d3f31b2668"/><file name="fontawesome-webfont.woff" hash="a35720c2fed2c7f043bc7e4ffb45e073"/><file name="fontawesome-webfont.woff2" hash="db812d8a70a4e88e888744c1c9a27e89"/></dir><dir name="images"><file name="like.png" hash="e8e889e330574a040d2fb55095cf823a"/><file name="like_hover.png" hash="82e36f761ac17b22f9dd030cc267f1a8"/><file name="retweet.png" hash="c9d0b3d828e3245180dded4bc6ed68b8"/><file name="retweet_hover.png" hash="bd7f1214903d878430142fac3129e178"/><file name="tweet.png" hash="c8c2553d8b1a83859a5394c3958f926d"/><file name="tweet_hover.png" hash="e11367b2854b3a472532df2f330917d2"/></dir><file name="lionbars.css" hash="9bf73f4525129e6ae9d28546f7e61948"/><file name="tweets.css" hash="e089ebe8fbc3580f414bfcc5b2194188"/></dir></dir></dir></dir></dir></target><target name="mageweb"><dir name="js"><dir name="kerss"><dir name="jquery"><file name="jquery-1.8.3.min.js" hash="e1288116312e4728f98923c79b034b67"/><file name="jquery.lionbars.0.3.js" hash="6d5b64f28a9b37fe3a2c96bd475963be"/><file name="jquery.noconflict.js" hash="3179f2255b046d5f2e9a71e365287bef"/><dir name="plugins"><dir name="mcolorpicker"><dir name="images"><file name="color.png" hash="e83e9461de67b11df1c5dbafb3ce3b75"/><file name="grid.gif" hash="68cd006d56482882fc5207951fce6c65"/><file name="meta100.png" hash="8f64a39cee2667863597690e67928278"/><file name="picker.png" hash="6f7b525c44e04220893082eb072c6605"/></dir><file name="mcolorpicker.min.js" hash="a091ac7ce083f0e5a432469a882daa56"/></dir></dir></dir></dir></dir></target><target name="magelib"><dir name="twitteroauth"><file name="OAuth.php" hash="d7b40029f9d61580663a04727d166156"/><file name="twitteroauth.php" hash="c329e25121783a292524acaea23bb28d"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

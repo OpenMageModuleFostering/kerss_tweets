@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <tweets translate="title">
+                                        <title>Twitter Module</title>
+                                        <sort_order>10</sort_order>
+                                    </tweets>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <kerss translate="title" module="tweets">
+                        <title>Kerss Tech</title>
+                        <sort_order>100</sort_order>
+                        <children>
+                            <tweets translate="title" module="tweets">
+                                <title>Latest Twitter Feeds</title>
+                                <sort_order>100</sort_order>               
+                                <children>
+                                    <configuration translate="title" module="tweets">
+                                        <title>Configuration</title>
+                                        <sort_order>10</sort_order>
+                                        <action>adminhtml/system_config/edit/section/tweets</action>
+                                    </configuration>
+                                </children>
+                            </tweets>
+                        </children>
+                    </kerss>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

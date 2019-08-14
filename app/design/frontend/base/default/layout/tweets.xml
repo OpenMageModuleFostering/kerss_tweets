@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="1.0.0">
+    <default>
+        <reference name="root">
+            <block type="tweets/tweets" name="tweets_widget"/>
+        </reference>
+        <reference name="head">
+            <block type="tweets/managejquery" name="managejquery">
+                <action method="addJqueryCss"/>
+            </block>
+        </reference>
+    </default>
+</layout>

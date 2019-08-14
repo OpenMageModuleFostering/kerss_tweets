@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+    <twitterwidget type="tweets/tweets">
+        <name>Twitter Tweets Widget</name>
+        <description type="desc">Add Twitter Tweets Widget</description>
+    </twitterwidget>
+</widgets>

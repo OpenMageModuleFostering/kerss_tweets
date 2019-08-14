@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Kerss_Tweets>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Widget />
+            </depends>
+        </Kerss_Tweets>
+    </modules>
+</config>

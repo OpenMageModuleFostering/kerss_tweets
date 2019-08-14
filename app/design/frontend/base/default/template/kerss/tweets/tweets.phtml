@@ -1,0 +1,96 @@
+<?php
+/**
+ * Kerss Infotech
+ * Kerss Twitter Tweets Magento Extension
+ *
+ * @category   Kerss
+ * @package    Kerss_Tweets
+ * @copyright  Copyright © 2015-2016 Kerss Infotech (http://kersstech.com/)
+ */
+$_helper = $this->helper('tweets');
+$enable = $_helper->getConfigValue('tweets/twittersettings/active');
+$tweets = $_helper->getLatestTweets();
+?>
+<?php if ($enable && $tweets): ?>
+    <?php $username = $_helper->getConfigValue('tweets/twittersettings/twitterid'); ?>
+    <?php $theme = $_helper->getConfigValue('tweets/displaysettings/block_theme'); ?>
+    <?php $avatarImage = $_helper->getConfigValue('tweets/displaysettings/circular_image'); ?>
+    <?php $block_title = $_helper->getConfigValue('tweets/displaysettings/block_title'); ?>
+    <?php $textcolor = $_helper->getConfigValue('tweets/displaysettings/timeagotext'); ?>
+    <?php $showImage = $_helper->getConfigValue('tweets/displaysettings/show_image'); ?>
+    <?php $showName = $_helper->getConfigValue('tweets/displaysettings/show_name'); ?>
+    <?php $showintents = $_helper->getConfigValue('tweets/displaysettings/showintents'); ?>
+    <?php $showfollow = $_helper->getConfigValue('tweets/displaysettings/showfollow'); ?>
+    <div class="block latest-twitter-block">
+        <div class="block-title">
+            <strong>
+                <span><i class="fa fa-twitter"></i>
+                    <a class="latest-twitter-head" target="_blank" href="<?php echo 'https://twitter.com/' . $username; ?>">
+                        <?php echo ' ' . $block_title; ?>
+                    </a>
+                </span>
+            </strong>
+        </div>
+        <div class="block-content theme-<?php echo $theme; ?> tweet-box" style="width: auto; height: 300px; position: relative;">
+            <ul>
+                <?php
+                foreach ($tweets as $tweet):
+                    ?>
+                    <li>
+                        <p>
+                            <?php if ($showImage) { ?>
+                                <img src="<?php echo $tweet['user_image']; ?>" class="user-avatar <?php
+                                if ($avatarImage) {
+                                    echo 'avatar-circle';
+                                }
+                                ?>" alt="<?php echo $tweet['user_name']; ?>" height="40" width="40" align="left">
+                                 <?php } ?>  
+                                 <?php if ($showName) { ?>
+                                <span style="float:left;padding-left:5px;"><?php echo (string) trim($tweet["user_name"]); ?><br/><?php echo $tweet["screen_name"]; ?></span>
+                            <?php } ?>  
+                        </p>
+                        <p class="tweet-data"><?php echo (string) trim($tweet["tweet"]); ?></p>
+                        <?php if (isset($tweet["url"]) && !empty($tweet["url"])) { ?>
+                            <img src="<?php echo $tweet["url"] ?>" >
+                        <?php } ?>
+                        <span class="tweetSeprator" style="color: <?php echo $textcolor; ?> !important;"><?php echo date('h:iA \o\n M d, Y', strtotime($tweet["time"])); ?></span>
+
+                        <?php if ($showintents) { ?>
+                            <div class="share-block">
+                                <a class="tweet" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $tweet['id']; ?>">
+                                    <span>&nbsp;</span>
+                                </a>
+                                <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id=<?php echo $tweet['id']; ?>">
+                                    <span>&nbsp;</span>
+                                </a>
+                                <a class="like" href="https://twitter.com/intent/like?tweet_id=<?php echo $tweet['id']; ?>">
+                                    <span>&nbsp;</span>
+                                    <?php echo $tweet["like"]; ?>
+                                </a>
+                            </div>
+                        <?php } ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+
+        </div>
+        <?php if ($showfollow): ?>
+            <div class="actions footerVivatweets">		
+                <a href="https://twitter.com/<?php echo $username; ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo $username; ?></a>
+                <script>!function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + '://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, 'script', 'twitter-wjs');</script>
+            </div>
+        <?php endif; ?>
+    </div>
+    <script>
+        jQuery('.tweet-box').lionbars();
+    </script>
+<?php endif; ?>
+

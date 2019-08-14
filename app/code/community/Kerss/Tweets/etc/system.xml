@@ -1,0 +1,254 @@
+<config>
+    <tabs>
+        <kerss>
+            <label>Kerss Software</label>
+            <sort_order>190</sort_order>
+        </kerss>
+    </tabs>	
+    <sections>
+        <tweets translate="label" module="tweets">
+            <label>Latest Twitter Feeds</label>
+            <tab>kerss</tab>
+            <sort_order>341</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <setuptwitter translate="label" module="tweets">
+                    <label>Setup Instruction</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                    <![CDATA[
+			<p>Follow below simple steps to get your API credentials from Twitter:</p>
+			<ul>
+				<li>1. Go to <a href="https://apps.twitter.com" target="_blank">https://apps.twitter.com</a> and sign in.</li>
+				<li>2. Click on Create New App button from top right.</li>
+				<li>3. Create an application - filling in your application name, description website and Callback URL.</li>
+				<li>4. Accept Twitter Developer Agreement and click on Create your Twitter Application button.</li>
+				<li>4. Go to Keys and Access Tokens tab.</li>
+				<li>5. Use your consumer key, consumer secret, access token, and access token secret into your Twitter / oAuth settings.</li>
+                        </ul>
+                    ]]>
+                    </comment>
+                </setuptwitter>
+                <twittersettings translate="label" module="tweets">
+                    <label>Twitter / oAuth Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enable Twitter Tweets</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <twitterid translate="label">
+                            <label>Twitter ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Use your twitter username]]></comment>
+                        </twitterid>
+                        <consumerkey translate="label">
+                            <label>Consumer Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </consumerkey>
+                        <consumersecret translate="label">
+                            <label>Consumer Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </consumersecret>
+                        <accesstoken translate="label">
+                            <label>Access Token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </accesstoken>
+                        <accesstokensecret translate="label">
+                            <label>Access Token Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </accesstokensecret>
+                    </fields>
+                </twittersettings>
+                <displaysettings translate="label" module="tweets">
+                    <label>Twitter Block Display Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enablejq translate="label">
+                            <label>Enable jQuery</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enablejq>
+                        <block_title translate="label">
+                            <label>Twitter Block Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </block_title>
+                        <block_theme translate="label">
+                            <label>Twitter Block Theme</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tweets/system_config_source_theme</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </block_theme>
+                        <show_name>
+                            <label>Show Twitter Screen Name</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_name>
+                        <show_image>
+                            <label>Show Avatar Image</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_image>
+                        <circular_image translate="label">
+                            <label>Show Circular Avatar Image</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </circular_image>
+                        <numberoftweets translate="label">
+                            <label>No. of Tweets to show</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tweets/system_config_source_numbers</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </numberoftweets>
+                        <showintents translate="label">
+                            <label>Show Twitter Intents</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showintents>
+                        <showlinks translate="label">
+                            <label>Show links in Tweet</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showlinks>
+                        <usenofollow translate="label">
+                            <label>Use nofollow tag in links</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </usenofollow>
+                        <opennew translate="label">
+                            <label>Open links in new window</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </opennew>
+                        <attags translate="label">
+                            <label>Link up @ tags</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attags>
+                        <hashtags translate="label">
+                            <label>Link up # tags</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hashtags>
+                        <showfollow translate="label">
+                            <label>Show Twitter follow button</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showfollow>
+                        <timeagotext>
+                            <label>Choose Tweet Time Color</label>                           
+                            <frontend_model>tweets/system_config_form_field_colorpicker</frontend_model>
+                            <backend_model>tweets/system_config_backend_design_color_validatetransparent</backend_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Specify the color.</comment>
+                        </timeagotext>
+                    </fields>
+                </displaysettings>
+                <implement translate="label">
+                    <label>Implement Code</label>
+                    <frontend_model>tweets/system_config_implementcode</frontend_model>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </implement>
+            </groups>
+        </tweets>
+    </sections>
+</config>

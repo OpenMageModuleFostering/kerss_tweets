@@ -1,0 +1,82 @@
+/**
+ * Kerss Infotech
+ * Kerss Twitter Tweets Magento Extension
+ *
+ * @category   Kerss
+ * @package    Kerss_Tweets
+ * @copyright  Copyright © 2015-2016 Kerss Infotech (http://kersstech.com/)
+ */
+.avatar-circle {
+    border-radius: 50%;
+}
+.block-content.theme-dark {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+}
+
+.block-content.theme-light {
+    background: #FFFFFF;
+    float: left;
+}
+
+.tweet:hover, .retweet:hover, .like:hover {
+    text-decoration: none;
+}
+.tweet, .retweet, .like {
+    width: 33%;
+    float: left;
+}
+.tweet span , .retweet span, .like span {
+    float: left;
+    width: 24px;
+}
+.tweet span {
+    background: rgba(0, 0, 0, 0) url("images/tweet.png") no-repeat scroll 0 0;
+}
+.tweet span:hover {
+    background: rgba(0, 0, 0, 0) url("images/tweet_hover.png") no-repeat scroll 0 0;
+}
+.retweet span {
+    background: rgba(0, 0, 0, 0) url("images/retweet.png") no-repeat scroll 0 0;
+}
+.retweet span:hover {
+    background: rgba(0, 0, 0, 0) url("images/retweet_hover.png") no-repeat scroll 0 0;
+}
+.like span {
+    background: rgba(0, 0, 0, 0) url("images/like.png") no-repeat scroll 0 0;
+}
+.like span:hover {
+    background: rgba(0, 0, 0, 0) url("images/like_hover.png") no-repeat scroll 0 0;
+}
+.share-block {
+    display: inline-block;
+    line-height: 22px;
+    padding-top: 10px;
+    width: 100%;
+}
+.tweet-data {
+    float: left;
+    width: 100%;
+}
+.tweetSeprator {
+    float: left;
+    padding: 5px 0;
+    width: 100%;
+}
+.block-content.theme-light li {
+    border-bottom: 1px solid #cccccc;
+    float: left;
+    padding: 10px 0;
+}
+.block-content.theme-light li, .block-content.theme-dark li {
+    width: 100%;
+}
+.block-content.theme-light, .block-content.theme-dark {
+    font-size: 12px;
+}
+.actions.footerVivatweets {
+    float: left;
+}
+.tweet-box .lb-content > ul {
+    float: left;
+    padding-right: 12px;
+}
