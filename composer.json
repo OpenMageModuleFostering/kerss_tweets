@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Kerss_Tweets",
+    "name": "OpenMageModuleFostering\/Kerss_Tweets",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "Allows you to display your recent tweets on any page of your website. ",
     "authors": [
-    {
-        "name": "Kalpesh Sakhareliya",
-        "email": "kersstech@gmail.com"
-    }
-],
+        {
+            "name": "Kalpesh Sakhareliya",
+            "email": "kersstech@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
